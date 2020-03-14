@@ -27,12 +27,22 @@ const data = [
     id: 1,
     label: "Vilma",
     value: "Vilma Çakmaktaş"
+  },
+  {
+    id: 2,
+    label: "Barni",
+    value: "Barni Moloztaş"
+  },
+  {
+    id: 3,
+    label: "Beti",
+    value: "Beti Moloztaş"
   }
 ];
 
 const App = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <MultiselectPicker
         data={data}
         onChange={checked => {
@@ -48,7 +58,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    left: 15
   }
 });
 

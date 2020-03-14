@@ -33,12 +33,13 @@ export default class MultiselectPicker extends Component {
     return (
       <FlatList
         data={data}
-        renderItem={({ item, index }) => (
+        renderItem={({ item }) => (
           <BouncyCheckbox
             isChecked={false}
             textColor="#000"
             unfillColor="white"
             fontFamily="JosefinSans-Regular"
+            iconComponent={<Image style={{ height: 10, width: 10 }} />}
             text={item.label}
             onPress={isChecked => this.selectedOnPress(item, isChecked)}
           />

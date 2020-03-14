@@ -1,5 +1,5 @@
 {
-  "name": "example",
+  "name": "@paraboly/react-native-multiselect-picker",
   "version": "0.0.1",
   "private": true,
   "scripts": {
