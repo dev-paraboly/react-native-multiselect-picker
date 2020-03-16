@@ -35,11 +35,11 @@ export default class MultiselectPicker extends Component {
         renderItem={({ item }) => (
           <BouncyCheckbox
             isChecked={false}
-            textColor="#000"
             unfillColor="white"
             fontFamily="JosefinSans-Regular"
             text={item.label}
             onPress={isChecked => this.selectedOnPress(item, isChecked)}
+            {...this.props}
           />
         )}
       />

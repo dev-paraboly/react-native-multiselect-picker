@@ -35,8 +35,8 @@ const data = [
   },
   {
     id: 3,
-    label: "Beti",
-    value: "Beti Moloztaş"
+    label: "Betty",
+    value: "Betty Moloztaş"
   }
 ];
 
