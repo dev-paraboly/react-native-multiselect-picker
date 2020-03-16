@@ -15,7 +15,7 @@ import {
   Text,
   StatusBar
 } from "react-native";
-import MultiselectPicker from "./lib/src/components/MultiselectPicker/MultiselectPicker";
+import MultiselectPicker from "./lib/src/MultiselectPicker";
 
 const data = [
   {

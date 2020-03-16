@@ -1,8 +1,7 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { Text, View, FlatList, Image } from "react-native";
-import BouncyCheckbox from "react-native-bouncy-checkbox";
 import _ from "lodash";
+import React, { Component } from "react";
+import { FlatList, Image } from "react-native";
+import BouncyCheckbox from "react-native-bouncy-checkbox";
 
 export default class MultiselectPicker extends Component {
   constructor(props) {
@@ -39,7 +38,6 @@ export default class MultiselectPicker extends Component {
             textColor="#000"
             unfillColor="white"
             fontFamily="JosefinSans-Regular"
-            iconComponent={<Image style={{ height: 10, width: 10 }} />}
             text={item.label}
             onPress={isChecked => this.selectedOnPress(item, isChecked)}
           />
