@@ -13,6 +13,7 @@ export default class MultiselectPicker extends Component {
 
   selectedOnPress = async (item, checked) => {
     const { id, value, label, isChecked } = item;
+    item.isChecked = checked;
     if (checked) {
       const temp = this.state.selectedCheckbox;
       temp.push(item);
