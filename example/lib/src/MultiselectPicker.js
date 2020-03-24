@@ -12,7 +12,7 @@ export default class MultiselectPicker extends Component {
   }
 
   selectedOnPress = async (item, checked) => {
-    const { id, value, label, isChecked } = item;
+    const { id } = item;
     item.isChecked = checked;
     if (checked) {
       const temp = this.state.selectedCheckbox;
@@ -28,22 +28,31 @@ export default class MultiselectPicker extends Component {
     this.props.onChange && this.props.onChange(this.state.selectedCheckbox);
   };
 
-  render() {
-    const { data } = this.props;
+  renderItem = data => {
+    const { item, index } = data;
+
     return (
-      <FlatList
-        data={data}
-        renderItem={({ item }) => (
-          <BouncyCheckbox
-            isChecked={item.isChecked}
-            unfillColor="white"
-            fontFamily="JosefinSans-Regular"
-            text={item.label}
-            onPress={isChecked => this.selectedOnPress(item, isChecked)}
-            {...this.props}
-          />
-        )}
+      <BouncyCheckbox
+        isChecked={item.isChecked}
+        unfillColor="white"
+        disableTextDecoration
+        text={item.label}
+        onPress={isChecked => this.selectedOnPress(item, isChecked)}
+        {...this.props}
       />
     );
+  };
+
+  componentDidMount() {
+    const temp = [];
+    this.props.data.map(item => {
+      if (item.isChecked) temp.push(item);
+      this.setState({ selectedCheckbox: temp });
+    });
+  }
+
+  render() {
+    const { data } = this.props;
+    return <FlatList data={data} renderItem={this.renderItem.bind(this)} />;
   }
 }
