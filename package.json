@@ -1,6 +1,6 @@
 {
   "name": "@paraboly/react-native-multiselect-picker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Awesome multiselect-picker",
   "keywords": [
     "kuray",
@@ -24,6 +24,6 @@
   "dependencies": {
     "lodash": "^4.17.15",
     "react-native-vector-icons": "^6.6.0",
-    "react-native-bouncy-checkbox": "^0.1.1"
+    "react-native-bouncy-checkbox": "^0.2.0"
   }
 }
